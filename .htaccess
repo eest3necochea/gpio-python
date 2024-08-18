@@ -1,0 +1,4 @@
+#Esta regla deniega el acceso a cualquier URL que comience con 'private'
+
+RewriteEngine On
+RewriteRule ^private/ - [F,L]

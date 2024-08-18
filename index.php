@@ -28,7 +28,7 @@ if ($request == 'GET') {
 
         default:
             //incluye la vista welcome
-            require_once(APP_SRC . '/view/welcomeView.php');
+            require_once(APP_SRC . '/view/index/welcomeView.php');
             break;
     }
 }
@@ -48,10 +48,13 @@ if ($request == 'POST') {
             //incluye la vista formulario
             require_once(APP_SRC . '/controller/gestion-usuario/formularioController.php');
             break;
-
+        case 'upload-gpio':
+            //incluye la vista formulario
+            require_once(APP_SRC . '/controller/gpio/uploadController.php');
+            break;
         default:
             //incluye la vista welcome
-            require_once(APP_SRC . '/view/welcomeView.php');
+            require_once(APP_SRC . '/view/index/welcomeView.php');
             break;
     }
 }
